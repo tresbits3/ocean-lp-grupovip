@@ -103,6 +103,31 @@ h1 em {
   line-height: 1.8;
 }
 
+.hero__redirect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+  color: #675f56;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.hero__loader {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border: 1.5px solid rgb(121 106 91 / 30%);
+  border-top-color: #796a5b;
+  border-radius: 50%;
+  animation: hero-loading 1s linear infinite;
+}
+
+@keyframes hero-loading {
+  to { transform: rotate(360deg); }
+}
+
 .hero__cta {
   display: inline-flex;
   align-items: center;
@@ -220,6 +245,10 @@ h1 em {
     line-height: 1.7;
   }
 
+  .hero__redirect {
+    margin-bottom: 17px;
+  }
+
   .hero__cta {
     width: 100%;
     gap: 10px;
@@ -250,5 +279,9 @@ h1 em {
 @media (prefers-reduced-motion: reduce) {
   .hero__cta {
     transition: none;
+  }
+
+  .hero__loader {
+    animation: none;
   }
 }
